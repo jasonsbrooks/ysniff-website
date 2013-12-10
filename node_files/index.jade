@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  div(id='map-canvas')
+  div.scroller(ng-controller='Slidey')
+    slider(floor="0" ceiling="{{locs.length - 1}}", ng-model="timeidx");
+    | {{ updateMarkers() }}
+  div.date <b> Dec 2, 5PM</b>
